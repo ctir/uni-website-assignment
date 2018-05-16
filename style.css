@@ -1,0 +1,21 @@
+/*Adapted from examples given*/
+/*	Author: Charles Tiriamai */
+
+.header {background-colour: grey;}
+.productImage{width: 75%;}
+.boxTitle{color:black;}
+
+#logo {float: left; width: 20%;}
+#com {width: 75%; height: 35%}
+#tabs{width: 100%; text-align: center; border:5px solid blue;}
+
+body {background-color: #BFEBFF;}
+p  {font-family: 'Arial'; color: blue; text-align:center;}
+div, table, iframe {width: 100%;}
+input{width: 50%}
+td{color:white}
+textarea{width: 75%; height: 150px;}
+iframe { height: 750px; border: 5px solid blue; background-color: DeepSkyBlue;}
+fieldset { margin: auto; width: 50%; background-color: DeepSkyBlue; border:5px solid blue;}
+
+

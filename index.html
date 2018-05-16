@@ -1,0 +1,96 @@
+<!--Adapted from examples given-->
+<!--//Author: Charles Tiriamai 	-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title> La Boutique </title>
+	<link rel="stylesheet" type="text/css" href="ctir836.css">
+	<script src="ctir836.js"></script>
+</head>
+<body> 
+	<img id="logo" src="http://redsox.uoa.auckland.ac.nz/BC/OPEN/Service.svc/Logo" alt="logo">
+	<nav>
+	<!--Adapted from TabExample.html-->
+		<table id="tabs"> <tr>
+		<!-- About Tab -->
+            <td id="AboutTab" onclick="showAboutTab();"> About	</td>
+		<!-- Book Tab -->
+		<div class="tabSep">
+            <td id="BookTab" onclick="showBookTab();">	Books	</td>
+		</div>
+		<!-- Bluray Tab -->
+		<div class ="tabSep">
+			<td id="BlurayTab" onclick="showBlurayTab();"> Blurays </td>
+		</div>
+		<!-- Comments Tab -->
+		<div class="tabSep">
+            <td id="CommentTab" onclick="showCommentTab();"> Comments </td>
+		</div>
+		<!-- Register Tab -->
+		<div class="tabSep">
+            <td id="RegisterTab" onclick="showRegisterTab();"> Register </td>
+		</div> </tr> </table>
+	</nav>
+	<!-- About Section -->
+	<div id="AboutSection"> 
+		<section> 
+			<p>Welcome to La Boutique Cassée, home for all your book and bluray needs.</p>
+			<p>Feel free to browse our catalogues or leave us a comment!</p> </section> </div>
+   
+	<!-- Book Section -->
+	<div id="BookSection"> <section> <p>
+		Welcome to our Book catalogue, please peruse our fine literary wares!
+		</p> <form>
+			<input type="search" id="bookSearch" placeholder="Browse our books" oninput="getBooks()">			
+		</form> <p/> <table id="showBooks"></table> </section> </div>
+   
+	<!-- Bluray Section -->
+	<div id="BluraySection"> <section> <p>
+		Welcome to our Bluray catalogue, endless hours of visual stimulation await you!
+	  </p> <form>
+			<input type="search" id="bluraySearch" placeholder="Browse our blurays" oninput="searchBlurays()">			
+		</form>	<p/> <table id="showBlurays"></table> </section> </div>
+	
+	<!-- Comment Section -->
+	<div id="CommentSection"> 
+		<section> 
+			<p>
+				Please leave us a comment, we'd love to hear about your experience with us!
+			<!-- Comment Form --> 
+			<form>
+				<fieldset>
+						Username:<br>
+						<input type="text" id="name" name="name" placeholder="Enter username here"><br><br>
+						Comment:<br>
+						<textarea id="comment" placeholder="Enter comment here"></textarea><br>
+						<!--<p><input id= "comment" type="text" name="comment"></p>-->
+						<input type="reset" value="Post Comment" onclick="postComment()"> <!--Adapted from https://stackoverflow.com/a/14837552 -->
+				</fieldset>
+			</form>
+			 </p>
+				
+			<!-- Posted Comments-->
+			 <p>
+			 <!--Adapted from https://www.w3schools.com/tags/tag_iframe.asp-->
+			 <iframe id ="frame" class="center" src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/htmlcomments"></iframe>
+			 </p>
+		</section> 
+	</div>
+   
+	<!-- Register Section -->
+	<div id="RegisterSection">
+		<section> 
+			<p> Please register here! </p> 
+			<form>
+				<fieldset>
+					Username:<br><input type="text" id="regUser" placeholder="Enter username here"><br><br>
+					Password:<br><input type="password" id="regPass" placeholder="Enter password here"><br><Br>	
+					Address:<br><input type="text" id="address" placeholder="Enter address here"><br><br>
+					<input type="reset" value="Register" onclick="register()">
+				</fieldset>
+			</form> 
+		</section> 
+	</div>
+</body>
+
+</html>
